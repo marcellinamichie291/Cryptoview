@@ -30,6 +30,9 @@ mrknout na pine.js - bylo by super mit ekvival. knih. pro python, mysql,...
 
 # Poznámky k verzím
 
+## **1.0.4 (18.10.2022)**
+### Technical Analysis Library (TA-lib)
+
 ## **1.0.3 (18.10.2022)**
 ### python-binance
 - requesting and receiving (historical) binance data with python-binance wrapper
