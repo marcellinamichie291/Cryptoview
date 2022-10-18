@@ -1,7 +1,6 @@
 # lightweight-charts-example
 example usage of connecting to binance data using websocket &amp; visualizing data with Lightweight Charts
 
-
 # konzultace poznamky
 - server?
 - realtimedata?
@@ -29,3 +28,15 @@ mrknout na pine.js - bylo by super mit ekvival. knih. pro python, mysql,...
 
 
 
+# Poznámky k verzím
+
+## **1.0.3 (18.10.2022)**
+### python-binance
+- requesting and receiving (historical) binance data with python-binance wrapper
+
+## **1.0.2 (07.10.2022)**
+- data charting using TradingView lightweight-charts
+- binance websocket testing
+
+## **1.0.1 (04.10.2022)**
+- Initial commit
