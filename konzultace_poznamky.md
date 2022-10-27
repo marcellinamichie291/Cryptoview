@@ -23,3 +23,8 @@ mrknout na pine.js - bylo by super mit ekvival. knih. pro python, mysql,...
 -knihovna na analyzu dat -- pandas - alternativa - dela obecne analyzy
 
 - zkouset to prvni na 1-mesicnich datech treba (pine.js)
+
+  
+- zobrazovani nejakych bodu primo na te svicce - mel by byt schopny se zvyraznit - datum, value
+- nekterou z os udelat logaritmickou
+- zobrazeni krivek

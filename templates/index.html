@@ -7,18 +7,69 @@
 <body>
     <h1>{{title}}</h1>
 
-    <div id="chart"></div>
-    <!--<input id="input_data" type="file" accept=".csv" style="margin-top: 10px; margin-bottom: 10px;" -->
-    <div id="trades" style="border:1px solid black; margin-top: 20px; margin-bottom: 20px;">
+    <h3>choose an option to display</h3>
 
-        <h2>binance WebSocket test</h2>
-        <br />
-        <h3>recieved data: </h3>
-        <br />
-        <label id="recievedData"></label>
+    <div id="properties" style="margin: 10px;">
+        <!--<form action="{{ url_for('index') }}" method="post">-->
+        <form action="/" method="GET">
+            <label style="margin-right: 10px;">option: </label>
+            <select id="kline_trade_option_id" name = "kline_trade_option_name">
+                <option>klines</option>
+                <option>trades</option>
+            </select>
+    
+            <label style="margin-right: 10px;">pair: </label>
+            <select id="pair_symbol_option_id" name = "pair_symbol_option_name">
+                {% for symbol in symbols %}
+                    <option value="{{symbol['symbol']}}">{{symbol['symbol']}}</option>    
+                {% endfor %}
+            </select>
+    
+            <label style="margin-right: 10px;">interval: </label>
+            <select id="interval_option_id" name = "interval_option_name">
+                    <option value="1m">1m</option>
+                    <option value="3m">3m</option>
+                    <option value="5m">5m</option>
+                    <option value="15m">15m</option>
+                    <option value="30m">30m</option>
+                    <option value="1h">1h</option>
+                    <option value="2h">2h</option>
+                    <option value="4h">4h</option>
+                    <option value="6h">6h</option>
+                    <option value="8h">8h</option>
+                    <option value ="12h">12h</option>
+                    <option value="1d">1d</option>
+                    <option value="3d">3d</option>
+                    <option value="1w">1w</option>
+                    <option value="1M">1M</option>
+            </select>
+    
+            <label style="margin-right: 10px;">data amount: </label>
+            <select id="data_amount_option_id" name = "data_amount_option_name">
+                <option value="1 day ago UTC" selected>1 day ago UTC</option>
+                <option value="7 days ago UTC">7 days ago UTC</option>
+                <option value="1 month ago UTC">1 month ago UTC</option>
+                <option value="2 months ago UTC">2 months ago UTC</option>
+                <option value="3 months ago UTC">3 months ago UTC</option>
+            </select>
+            <button type="button" id="display_data_bn">Display data</button>
+            
+        </form>
+        <form>
+            <select id="priceScaleModeSelect">
+                <option value="normal" selected>Normal</option>
+                <option value="logarithmic">Logarithmic</option>
+                <option value="percentage">Percentage</option>    
+            </select>
+            <button type="button" id="set_pricescalemode_bn">Change scale</button>
+        </form>
+        <!--<button id="init_chart_bn">INIT CHART</button>-->
+
 
     </div>
 
+    <div id="chart"></div>
+    <div id="chart2" style="border:2px solid black;"></div>
     <h3>Settings</h3>
 
     <div id="settings">
@@ -32,7 +83,7 @@
     </div>
 
     <script>
-
+        /*
         var binanceSocket = new WebSocket("wss://stream.binance.com:9443/ws/ethbtc@trade");
 
         var tradeDiv = document.getElementById("trades");
@@ -57,12 +108,12 @@
                 ;
 
         }
-
+        */
     </script>
 
     <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
-    <script src="test_data.js"></script>
     <script src="{{url_for('static', filename='chart.js')}}"></script>
+    <link rel="stylesheet" href="static/style.css">
 
 </body>
 
