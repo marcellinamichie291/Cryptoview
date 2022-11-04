@@ -3,6 +3,9 @@ example usage of connecting to binance data using websocket &amp; visualizing da
 
 # Poznámky k verzím
 
+## **1.0.7 (11.04.2022)**
+- peaks & valleys application
+
 ## **1.0.6 (27.10.2022)**
 ### Added features
     - chart graphs according to user-specified parameters

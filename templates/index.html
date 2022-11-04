@@ -5,6 +5,8 @@
 </head>
 
 <body>
+    <meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0" />
     <h1>{{title}}</h1>
 
     <h3>choose an option to display</h3>
@@ -53,6 +55,8 @@
                 <option value="3 months ago UTC">3 months ago UTC</option>
             </select>
             <button type="button" id="display_data_bn">Display data</button>
+            <!--<button type="button" id="insert_curve_bn">Insert curve</button>-->
+            
             
         </form>
         <form>
@@ -63,13 +67,12 @@
             </select>
             <button type="button" id="set_pricescalemode_bn">Change scale</button>
         </form>
-        <!--<button id="init_chart_bn">INIT CHART</button>-->
+        <button id="peak_valley_bn">Apply peaks & valley strategy</button>
 
 
     </div>
+    <div id="container" style="position: relative; width: 98%; height: 100%; border: 5px solid grey; margin-left: 1%; margin-right: 1%;"></div>
 
-    <div id="chart"></div>
-    <div id="chart2" style="border:2px solid black;"></div>
     <h3>Settings</h3>
 
     <div id="settings">
